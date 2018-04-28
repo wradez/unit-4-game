@@ -8,7 +8,9 @@
     <title>Crystal Collector</title>
     <!-- bootstrap css and JS -->
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-mDdzqEimigFhaXpqHTnkj2JumLRbFB9qEVJK77zv7lBrdvhyPgl0WaWE7jloVkek" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- custom CSS and JS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -35,10 +37,13 @@
         <div class="container game card">
 
             <div class="row">
-                <div class="col-md-6 card-body">
+                <div class="col-md-3 offset-1 card-body">
                     <h2>Wins: <span id="wins">0</span></h2>
                 </div>
-                <div class="col-md-6 card-body">
+                <div class="col-md-4 card-body">
+                    <h2 class="status"></h2>
+                </div>
+                <div class="col-md-3 offset-1 card-body">
                     <h2>Losses: <span id="losses">0</span></h2>
                 </div>
             </div>
@@ -48,12 +53,7 @@
                     <p>Achieve me: <span id="achieveScore">89</span></p>
                 </div>
     
-                <div class="col-md-6 card-body border">
-                    <img class="gem" src="assets/images/Sapphire.png"/>
-                    <img class="gem" src="assets/images/Emerald.png"/>
-                    <img class="gem" src="assets/images/Ruby.png"/>
-                    <img class="gem" src="assets/images/Diamond.png"/>
-                </div>
+                <div class="col-md-6 gems card-body border"></div>
     
                 <div class="col-md-3 card-body border">
                     <p>Your score: <span id="yourScore">0</span></p>
@@ -63,6 +63,6 @@
     </div>
 
     
-    
+
 </body>
 </html>
