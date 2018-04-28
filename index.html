@@ -1,0 +1,68 @@
+<DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Crystal Collector</title>
+    <!-- bootstrap css and JS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-mDdzqEimigFhaXpqHTnkj2JumLRbFB9qEVJK77zv7lBrdvhyPgl0WaWE7jloVkek" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- custom CSS and JS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type= "text/javascript" src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+    
+    <!-- Main introduction to the game -->
+    <div class="jumbotron text-center">
+
+        <div class="instructions">
+            <h1 class="display-4">Crystal Collector</h1>
+            <p class="lead">Welcome to the game Crystal Collector. See the instructions below to elarn how to play.</p>
+            <hr class="my-4">
+            <p>When you are ready to play, click the button below to get started. You will see a score to achieve, 4 random gems each with their own value, and your score. The point of the game is to click the gems, in whichever order you choose, to get your score equal to the score to achieve.  If you can do that, you win! If your score goes over the score to achieve, you lose...!</p>
+            <p class="lead">
+                <!-- once clicked, this should hide the intro page and display the actual game page -->
+                <a class="btn btn-primary btn-lg" href="#" role="button">Click for Enjoyment!</a>
+            </p>
+        </div>
+
+        <!-- Game container -->
+        <div class="container game card">
+
+            <div class="row">
+                <div class="col-md-6 card-body">
+                    <h2>Wins: <span id="wins">0</span></h2>
+                </div>
+                <div class="col-md-6 card-body">
+                    <h2>Losses: <span id="losses">0</span></h2>
+                </div>
+            </div>
+
+            <div class="row card-body">
+                <div class="col-md-3  card-body border">
+                    <p>Achieve me: <span id="achieveScore">89</span></p>
+                </div>
+    
+                <div class="col-md-6 card-body border">
+                    <img class="gem" src="assets/images/Sapphire.png"/>
+                    <img class="gem" src="assets/images/Emerald.png"/>
+                    <img class="gem" src="assets/images/Ruby.png"/>
+                    <img class="gem" src="assets/images/Diamond.png"/>
+                </div>
+    
+                <div class="col-md-3 card-body border">
+                    <p>Your score: <span id="yourScore">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
