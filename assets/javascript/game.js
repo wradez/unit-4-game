@@ -8,11 +8,12 @@ var achieveScore= 0;
 var yourScore = 0;
 var wins = 0;
 var losses = 0;
-var gemImages = ["assets/images/Sapphire.png", "assets/images/Emerald.png", "assets/images/Ruby.png", "assets/images/Diamond.png", "assets/images/Dragonstone.png", "assets/images/Onyx.png", "assets/images/Zenyte.png"];
+var gemImages = ["assets/images/Sapphire.png", "assets/images/Emerald.png", "assets/images/Ruby.png", "assets/images/Diamond.png", "assets/images/Dragonstone.png"];
 
 $(document).ready(function() {
 
     //Call/Run the updateVariablesOnPage function
+    // $(".game").hide();
     updateVariablesOnPage();
 
     
@@ -43,6 +44,11 @@ $(document).ready(function() {
             $(".status").text("You lose...").delay(500, updateVariablesOnPage());
         }
     });
+
+    //once you click the starting button, this will remove the hide class and add a show class for the block surrounding the game
+    $("body").on("click",".btn-primary",function(){
+        $(".game").removeClass("d-none").addClass("d-block");
+    })
 
     //functions
         //updateVariablesOnPage()
