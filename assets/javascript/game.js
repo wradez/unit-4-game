@@ -10,7 +10,7 @@ var wins = 0;
 var losses = 0;
 var gemImages = ["assets/images/Sapphire.png", "assets/images/Emerald.png", "assets/images/Ruby.png", "assets/images/Diamond.png", "assets/images/Dragonstone.png"];
 var shame = new Audio("assets/shame-1.mp3");
-var victory = new Audio("assets/birdtheword.mp3");
+var victory = new Audio("assets/victoryff.mp3");
 
 $(document).ready(function() {
 
