@@ -9,6 +9,8 @@ var yourScore = 0;
 var wins = 0;
 var losses = 0;
 var gemImages = ["assets/images/Sapphire.png", "assets/images/Emerald.png", "assets/images/Ruby.png", "assets/images/Diamond.png", "assets/images/Dragonstone.png"];
+var shame = new Audio("assets/shame-1.mp3");
+var victory = new Audio("assets/birdtheword.mp3");
 
 $(document).ready(function() {
 
@@ -35,13 +37,17 @@ $(document).ready(function() {
         yourScore = yourScore + parseInt($(this).attr("value"));
         $("#yourScore").text(yourScore);
 
+
         if(yourScore === achieveScore){
             wins++;
-            $(".status").text("You win!").delay(500, updateVariablesOnPage());
-            // updateVariablesOnPage();
+            $(".status").text("You win!");
+            updateVariablesOnPage();
+            victory.play();
         }else if(yourScore > achieveScore){
             losses++;
-            $(".status").text("You lose...").delay(500, updateVariablesOnPage());
+            $(".status").text("SHAME...");
+            updateVariablesOnPage();
+            shame.play();
         }
     });
 
